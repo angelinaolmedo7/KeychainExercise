@@ -7,28 +7,26 @@
 //
 
 import XCTest
+import KeychainSwift
 @testable import KeychainExercise
 
 class KeychainExerciseTests: XCTestCase {
+    
+    var keychainVC = ViewController()
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testSave() {
+        keychainVC.keychainSave(str: "test")
+        XCTAssertEqual(keychainVC.keychainReveal()!, "test")
+        
+        keychainVC.keychainSave(str: "test 2")
+        XCTAssertEqual(keychainVC.keychainReveal()!, "test 2")
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testDelete() {
+        keychainVC.keychainSave(str: "test 3")
+        XCTAssertEqual(keychainVC.keychainReveal()!, "test 3")
+        keychainVC.keychainDelete()
+        XCTAssertEqual(keychainVC.keychainReveal()!, "")
     }
 
 }

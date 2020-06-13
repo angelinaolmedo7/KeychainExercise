@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		2905EF1F2491A35900E7AEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2905EF1E2491A35900E7AEBB /* Assets.xcassets */; };
 		2905EF222491A35900E7AEBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2905EF202491A35900E7AEBB /* LaunchScreen.storyboard */; };
 		2905EF2D2491A35A00E7AEBB /* KeychainExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2905EF2C2491A35A00E7AEBB /* KeychainExerciseTests.swift */; };
+		2905EF392491A42300E7AEBB /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2905EF382491A42300E7AEBB /* KeychainSwift */; };
+		2905EF3B2491A51B00E7AEBB /* RevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2905EF3A2491A51B00E7AEBB /* RevealViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 		2905EF282491A35A00E7AEBB /* KeychainExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeychainExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2905EF2C2491A35A00E7AEBB /* KeychainExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainExerciseTests.swift; sourceTree = "<group>"; };
 		2905EF2E2491A35A00E7AEBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2905EF3A2491A51B00E7AEBB /* RevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevealViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2905EF392491A42300E7AEBB /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +86,7 @@
 				2905EF152491A35600E7AEBB /* AppDelegate.swift */,
 				2905EF172491A35600E7AEBB /* SceneDelegate.swift */,
 				2905EF192491A35600E7AEBB /* ViewController.swift */,
+				2905EF3A2491A51B00E7AEBB /* RevealViewController.swift */,
 				2905EF1B2491A35600E7AEBB /* Main.storyboard */,
 				2905EF1E2491A35900E7AEBB /* Assets.xcassets */,
 				2905EF202491A35900E7AEBB /* LaunchScreen.storyboard */,
@@ -115,6 +120,9 @@
 			dependencies = (
 			);
 			name = KeychainExercise;
+			packageProductDependencies = (
+				2905EF382491A42300E7AEBB /* KeychainSwift */,
+			);
 			productName = KeychainExercise;
 			productReference = 2905EF122491A35600E7AEBB /* KeychainExercise.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +173,9 @@
 				Base,
 			);
 			mainGroup = 2905EF092491A35500E7AEBB;
+			packageReferences = (
+				2905EF372491A42300E7AEBB /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = 2905EF132491A35600E7AEBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -203,6 +214,7 @@
 				2905EF1A2491A35600E7AEBB /* ViewController.swift in Sources */,
 				2905EF162491A35600E7AEBB /* AppDelegate.swift in Sources */,
 				2905EF182491A35600E7AEBB /* SceneDelegate.swift in Sources */,
+				2905EF3B2491A51B00E7AEBB /* RevealViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +481,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2905EF372491A42300E7AEBB /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 19.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2905EF382491A42300E7AEBB /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2905EF372491A42300E7AEBB /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2905EF0A2491A35500E7AEBB /* Project object */;
 }
